@@ -550,6 +550,7 @@ class WikiaAPI {
       }
 
       const reqUrl = `${this.wikiapiurl}/${endpoint}?${query.join('&')}`
+      console.log(reqUrl)
       got(reqUrl, {method: method || 'GET'}).then(response => {
         let body
         try {
