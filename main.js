@@ -13,7 +13,7 @@ class WikiaAPI {
   constructor (subdomain) {
     /**
      * Subdomain, for example "dev" or "pl.community"
-     * @see [Help:URL]{@link http://community.wikia.com/wiki/Help:URL} on Community Central
+     * @see [Help:URL]{@link http://community.fandom.com/wiki/Help:URL} on Community Central
      *
      * @name WikiaAPI#subdomain
      * @type {string}
@@ -27,11 +27,11 @@ class WikiaAPI {
 
   /**
    * Get latest activity information
-   * @see [Activity/LatestActivity]{@link http://dev.wikia.com/api/v1#!/Activity/getLatestActivity_get_0}
+   * @see [Activity/LatestActivity]{@link http://dev.fandom.com/api/v1#!/Activity/getLatestActivity_get_0}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {number} [options.limit=10] - Limit the number of results
-   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {boolean} [options.allowDuplicates=true] - Set if duplicate values of an article's revisions made by the same user are not allowed
    * @return {Promise<Object, Error>} A Promise with an Object containing latest activity on fulfil, and Error on rejection
    */
@@ -53,11 +53,11 @@ class WikiaAPI {
 
   /**
    * Get recently changed articles
-   * @see [Activity/RecentlyChangedArticles]{@link http://dev.wikia.com/api/v1#!/Activity/getRecentlyChangedArticles_get_1}
+   * @see [Activity/RecentlyChangedArticles]{@link http://dev.fandom.com/api/v1#!/Activity/getRecentlyChangedArticles_get_1}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {number} [options.limit=10] - Limit the number of results
-   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {boolean} [options.allowDuplicates=true] - Set if duplicate values of an article's revisions made by the same user are not allowed
    * @return {Promise<Object, Error>} A Promise with an Object containing recently changed articles on fulfil, and Error on rejection
    */
@@ -79,7 +79,7 @@ class WikiaAPI {
 
   /**
    * Get simplified article contents
-   * @see [Articles/AsSimpleJson]{@link http://dev.wikia.com/api/v1#!/Articles/getAsSimpleJson_get_0}
+   * @see [Articles/AsSimpleJson]{@link http://dev.fandom.com/api/v1#!/Articles/getAsSimpleJson_get_0}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {number} options.id - A single article ID
@@ -101,7 +101,7 @@ class WikiaAPI {
 
   /**
    * Get details about one or more articles
-   * @see [Articles/Details]{@link http://dev.wikia.com/api/v1#!/Articles/getDetails_get_1}
+   * @see [Articles/Details]{@link http://dev.fandom.com/api/v1#!/Articles/getDetails_get_1}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {(number[]|number)} [options.ids] - An Array of article ids or a single article id
@@ -135,11 +135,11 @@ class WikiaAPI {
 
   /**
    * Get articles list in alphabetical order
-   * @see [Articles/List]{@link http://dev.wikia.com/api/v1#!/Articles/getList_get_2}
+   * @see [Articles/List]{@link http://dev.fandom.com/api/v1#!/Articles/getList_get_2}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {string} [options.category] - Return only articles belonging to the provided valid category title
-   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {number} [options.limit=25] - Limit the number of results
    * @param {string} [options.offset=!] - Lexicographically minimal article title
    * @return {Promise<Object, Error>} - A Promise with an Object containing articles list on fulfil, and Error on rejection
@@ -163,11 +163,11 @@ class WikiaAPI {
 
   /**
    * Get a list of pages on the current wiki
-   * @see [Articles/List?expand=1]{@link http://dev.wikia.com/api/v1#!/Articles/getListExpanded_get_3}
+   * @see [Articles/List?expand=1]{@link http://dev.fandom.com/api/v1#!/Articles/getListExpanded_get_3}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {string} [options.category] - Return only articles belonging to the provided valid category title
-   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces=0] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {number} [options.limit=25] - Limit the number of results
    * @param {string} [options.offset=!] - Lexicographically minimal article title
    * @return {Promise<Object, Error>} - A Promise with an Object containing expanded articles list on fulfil, and Error on rejection
@@ -192,7 +192,7 @@ class WikiaAPI {
 
   /**
    * Get the most linked articles on this wiki
-   * @see [Articles/MostLinked]{@link http://dev.wikia.com/api/v1#!/Articles/getTop_get_4}
+   * @see [Articles/MostLinked]{@link http://dev.fandom.com/api/v1#!/Articles/getTop_get_4}
    *
    * @return {Promise<Object, Error>} - A Promise with an Object containing most linked articles on fulfil, and Error on rejection
    */
@@ -208,7 +208,7 @@ class WikiaAPI {
 
   /**
    * Get the most linked articles on this wiki (expanded results)
-   * @see [Articles/MostLinked?expand=1]{@link http://dev.wikia.com/api/v1#!/Articles/getTopExpanded_get_5}
+   * @see [Articles/MostLinked?expand=1]{@link http://dev.fandom.com/api/v1#!/Articles/getTopExpanded_get_5}
    *
    * @return {Promise<Object, Error>} - A Promise with an Object containing most linked articles on fulfil, and Error on rejection
    */
@@ -224,10 +224,10 @@ class WikiaAPI {
 
   /**
    * Get list of new articles on this wiki
-   * @see [Articles/New]{@link http://dev.wikia.com/api/v1#!/Articles/getNew_get_6}
+   * @see [Articles/New]{@link http://dev.fandom.com/api/v1#!/Articles/getNew_get_6}
    *
    * @param {Object} [options] - An Object containing every other parameter
-   * @param {(number[]|number)} [options.namespaces] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {number} [options.limit=20] - Limit the number of result - maximum limit is 100
    * @param {number} [options.minArticleQuality=10] - Minimal value of article quality. Ranges from 0 to 99
    * @return {Promise<Object, Error>} - A Promise with an Object containing new articles on fulfil, and Error on rejection
@@ -250,7 +250,7 @@ class WikiaAPI {
 
   /**
    * Get popular articles for the current wiki (from the beginning of time)
-   * @see [Articles/Popular]{@link http://dev.wikia.com/api/v1#!/Articles/getPopular_get_7}
+   * @see [Articles/Popular]{@link http://dev.fandom.com/api/v1#!/Articles/getPopular_get_7}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {integer} [options.limit=10] - Limit the number of result - maximum limit is 10
@@ -274,7 +274,7 @@ class WikiaAPI {
 
   /**
    * Get popular articles for the current wiki (from the beginning of time)
-   * @see [Articles/Popular?expand=1]{@link http://dev.wikia.com/api/v1#!/Articles/getPopularExpanded_get_8}
+   * @see [Articles/Popular?expand=1]{@link http://dev.fandom.com/api/v1#!/Articles/getPopularExpanded_get_8}
    *
    * @param {Object} [options] - An Object containing every other parameter
    * @param {integer} [options.limit=10] - Limit the number of result - maximum limit is 10
@@ -299,10 +299,10 @@ class WikiaAPI {
 
   /**
    * Get the most viewed articles on this wiki
-   * @see [Aricles/Top]{@link http://dev.wikia.com/api/v1#!/Articles/getTop_get_9}
+   * @see [Aricles/Top]{@link http://dev.fandom.com/api/v1#!/Articles/getTop_get_9}
    *
    * @param {Object} [options] - An Object containing every other parameter
-   * @param {(number[]|number)} [options.namespaces] -- Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces] -- Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {string} [options.category] - Return only articles belonging to the provided valid category title
    * @param {number} [options.limit=10] - Limit the number of result - maximum limit is 250
    * @param {number} [baseArticleId] - Trending and popular related to article with given id
@@ -327,10 +327,10 @@ class WikiaAPI {
 
   /**
    * Get the most viewed articles on this wiki (expanded results)
-   * @see [Aricles/Top?expand=1]{@link http://dev.wikia.com/api/v1#!/Articles/getTopExpanded_get_10}
+   * @see [Aricles/Top?expand=1]{@link http://dev.fandom.com/api/v1#!/Articles/getTopExpanded_get_10}
    *
    * @param {Object} [options] - An Object containing every other parameter
-   * @param {(number[]|number)} [options.namespaces] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @param {string} [options.category] - Return only articles belonging to the provided valid category title
    * @param {number} [options.limit=10] - Limit the number of result - maximum limit is 250
    * @param {number} [baseArticleId] - Trending and popular related to article with given id
@@ -356,7 +356,7 @@ class WikiaAPI {
 
   /**
    * Get wiki data, including key values, navigation data, and more
-   * @see [Mercury/WikiVariables]{@link http://dev.wikia.com/api/v1#!/Mercury/getWikiData_get_0}
+   * @see [Mercury/WikiVariables]{@link http://dev.fandom.com/api/v1#!/Mercury/getWikiData_get_0}
    *
    * @return {Promise<Object, Error>} - A Promise with an Object containing wiki data on fulfil, and Error on rejection
    */
@@ -372,7 +372,7 @@ class WikiaAPI {
 
   /**
    * Get wiki navigation links (the main menu of given wiki)
-   * @see [Navigation/Data](http://dev.wikia.com/api/v1#!/Navigation/getData_get_0)
+   * @see [Navigation/Data](http://dev.fandom.com/api/v1#!/Navigation/getData_get_0)
    *
    * @return {Promise<Object, Error>} - A Promise with an Object containing navigation data on fulfil, and Error on rejection
    */
@@ -389,7 +389,7 @@ class WikiaAPI {
   /**
    * Get pages related to a given article ID
    * WARNING: RelatedPages extension is disabled on every wiki
-   * @see [RelatedPages/List](http://dev.wikia.com/api/v1#!/RelatedPages/getList_get_0)
+   * @see [RelatedPages/List](http://dev.fandom.com/api/v1#!/RelatedPages/getList_get_0)
    *
    * @param {Object} options - An Object containing every other parameter
    * @param {(number[]|number)} options.ids - An Array of article ids or a single article id
@@ -416,7 +416,7 @@ class WikiaAPI {
 
   /**
    * Do search for given phrase
-   * @see [Search/List](http://dev.wikia.com/api/v1#!/Search/getList_get_1)
+   * @see [Search/List](http://dev.fandom.com/api/v1#!/Search/getList_get_1)
    *
    * @param {Object} options - An Object containing every other parameter
    * @param {string} options.query - Search query
@@ -425,7 +425,7 @@ class WikiaAPI {
    * @param {number} [options.limit=25] - Limit the number of results
    * @param {number} [options.minArticleQuality=10] - Minimal value of article quality. Ranges from 0 to 99
    * @param {number} [options.batch=1] - The batch (page) of results to fetch
-   * @param {(number[]|number)} [options.namespaces=[0, 14]] - Array of namespace ids or a single namespace id, see more: {@link http://community.wikia.com/wiki/Help:Namespaces}
+   * @param {(number[]|number)} [options.namespaces=[0, 14]] - Array of namespace ids or a single namespace id, see more: {@link http://community.fandom.com/wiki/Help:Namespaces}
    * @return {Promise<Object, Error>} - A Promise with an Object containing search results on fulfil, and Error on rejection
    */
   getSearchList (options = {}) {
@@ -450,7 +450,7 @@ class WikiaAPI {
 
   /**
    * Find suggested phrases for chosen query
-   * @see [SearchSuggestions/List](http://dev.wikia.com/api/v1#!/SearchSuggestions/getList_get_0)
+   * @see [SearchSuggestions/List](http://dev.fandom.com/api/v1#!/SearchSuggestions/getList_get_0)
    *
    * @param {Object} options - An Object containing every other parameter
    * @param {string} options.query - Search query
@@ -472,7 +472,7 @@ class WikiaAPI {
 
   /**
    * Get details about selected users
-   * @see [User/Details](http://dev.wikia.com/api/v1#!/User/getDetails_get_0)
+   * @see [User/Details](http://dev.fandom.com/api/v1#!/User/getDetails_get_0)
    *
    * @param {Object} options - An Object containing every other parameter
    * @param {(number[]|number)} options.ids - An Array of user ids or a single user id
@@ -495,49 +495,49 @@ class WikiaAPI {
   }
 
   /**
-   * Basepath of Wikia API V1 for given subdomain, for example "http://dev.wikia.com/api/v1/"
+   * Basepath of Wikia API V1 for given subdomain, for example "http://dev.fandom.com/api/v1/"
    * @name WikiaAPI#wikiapiurl
    * @type {string}
    * @readonly
    */
   get wikiapiurl () {
-    return this.subdomain === null ? WikiaAPI.wikiaapiurl : `http://${this.subdomain}.wikia.com/api/v1`
+    return this.subdomain === null ? WikiaAPI.wikiaapiurl : `http://${this.subdomain}.fandom.com/api/v1`
   }
   set wikiapiurl (value) {
     throw new Error('Cannot set a read-only property \'wikiapiurl\'')
   }
 
   /**
-   * Basepath of wiki for given subdomain, for example "http://dev.wikia.com"
+   * Basepath of wiki for given subdomain, for example "http://dev.fandom.com"
    * @name WikiaAPI#wikiurl
    * @type {string}
    * @readonly
    */
   get wikiurl () {
-    return this.subdomain === null ? WikiaAPI.wikiaurl : `http://${this.subdomain}.wikia.com`
+    return this.subdomain === null ? WikiaAPI.wikiaurl : `http://${this.subdomain}.fandom.com`
   }
   set wikiurl (value) {
     throw new Error('Cannot set a read-only property \'wikiurl\'')
   }
 
   /**
-   * Basepath of Wikia API V1 for Wikia (http://wikia.com/api/v1/)
+   * Basepath of Wikia API V1 for Wikia (http://fandom.com/api/v1/)
    * @name WikiaAPI.wikiaapiurl
    * @type {string}
    * @readonly
    */
   static get wikiaapiurl () {
-    return 'http://wikia.com/api/v1'
+    return 'http://fandom.com/api/v1'
   }
 
   /**
-   * Basepath of Wikia (http://wikia.com)
+   * Basepath of Wikia (http://fandom.com)
    * @name WikiaAPI.wikiaurl
    * @type {string}
    * @readonly
    */
   static get wikiaurl () {
-    return 'http://wikia.com'
+    return 'http://fandom.com'
   }
 
   _makeRequest (endpoint, params, method) {
